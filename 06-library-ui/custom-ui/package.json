@@ -1,0 +1,30 @@
+{
+  "name": "custom-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.jsx",
+  "files": [
+    "style.css",
+    "index.jsx"
+  ],
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel ./src --out-dir ./dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "^18.0 || ^17.0"
+  },
+  "dependencies": {
+    "clsx": "^1.2.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.22.5",
+    "@babel/core": "^7.22.5",
+    "@babel/preset-env": "^7.22.5",
+    "@babel/preset-react": "^7.22.5"
+  }
+}

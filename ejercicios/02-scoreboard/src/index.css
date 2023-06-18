@@ -1,0 +1,80 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  aspect-ratio: 1/1;
+  background-color: #242424;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 600px;
+  max-width: 100%;
+  gap: 12px;
+}
+
+.counter {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #fff;
+  position: relative;
+}
+
+.counter-actions {
+  display: flex;
+  gap: 12px;
+  position: absolute;
+  bottom: 12px;
+}
+
+.counter-button {
+  width: 48px;
+  height: 48px;
+  background-color: #fff;
+  color: #242424;
+  border: none;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 48px;
+  text-align: center;
+  padding: 0;
+  cursor: pointer;
+}
+
+.name {
+  font-size: 1.25rem;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: .5rem;
+  align-items: center;
+}
+
+.edit-form {
+  display: flex;
+  padding: 1rem 0;
+  overflow: hidden;
+}
+
+.textfield {
+  border: 1px solid #333;
+  font-size: 1rem;  
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: .25rem .5rem;
+}

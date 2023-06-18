@@ -1,0 +1,87 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta title="Docs / Styled" />
+
+# Styled
+
+The ```styled``` function allows to create and customize React component, it allows to use css syntax using template String or css object if it call with a function
+It can be imported from:
+
+```javascript 
+  import styled from "clever-react/ui/styles/styled";
+```
+
+## Template String example
+
+```javascript
+import styled from 'clever-react/ui/styles/styled'
+
+const Button = styled.button`
+  color: turquoise;
+`
+render(<Button>This my button component.</Button>)
+```
+
+## Access to props
+
+All functions within ```styled``` will receive the props of the component.
+
+```javascript
+import styled from 'clever-react/ui/styles/styled'
+
+const Button = styled.button`
+  color: ${props =>
+    props.primary ? 'hotpink' : 'turquoise'};
+`
+
+const Container = styled.div(props => ({
+  display: 'flex',
+  flexDirection: props.column && 'column'
+}))
+
+render(
+  <Container column>
+    <Button>This is a regular button.</Button>
+    <Button primary>This is a primary button.</Button>
+  </Container>
+)
+```
+
+## Access to theme
+
+The theme is received as a component prop.
+
+```javascript
+import styled from 'clever-react/ui/styles/styled'
+
+const Link = styled.a`
+  color: ${props => props.theme.colors.primary[500]};
+  text-decoration: none;
+`
+
+render(
+  <Link href="https://cleverads.com">Clever Ads</Link>
+)
+```
+
+## Customize any component
+
+Any component that accepts ```className`` can be customized, passing it as a parameter to the function ``styled``.
+
+```javascript
+import styled from 'clever-react/ui/styles/styled'
+
+const BasicBox = ({ className }) => (
+  <div className={className}>Some text</div>
+)
+
+const FancyBox = styled(BasicBox)`
+  color: hotpink;
+`
+
+render(<FancyBox />)
+```
+
+## More information
+
+```styled``` uses the Emotion library, you can access the documentation of the library in https://emotion.sh/docs/styled
