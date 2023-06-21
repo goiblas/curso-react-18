@@ -10,7 +10,7 @@ import TrackingProvider from "./components/TrackingProvider";
 import { HelmetProvider } from "react-helmet-async";
 
 // import { lazy, Suspense } from "react";
-// const ProfilePage = lazy(() => import("./pages/Profile"));
+// const ProfilePage = lazy(() => import("./pages/Profile.jsx"));
 
 const router = createBrowserRouter([{
     element: <TrackingProvider />,
