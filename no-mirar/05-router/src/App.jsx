@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Profile from './components/Profile';
 import PublicRoute from './components/PublicRoute';
+import { HelmetProvider } from 'react-helmet-async';
 
 const router = createBrowserRouter([{
   path: "/login",
@@ -35,8 +36,10 @@ const router = createBrowserRouter([{
 
 export default function App() {
   return (
-        <UserProvider>
-            <RouterProvider router={router} />
-        </UserProvider>
+        <HelmetProvider>
+          <UserProvider>
+              <RouterProvider router={router} />
+          </UserProvider>
+        </HelmetProvider>
   )
 }
