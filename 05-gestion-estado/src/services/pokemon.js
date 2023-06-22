@@ -11,6 +11,7 @@ const mapDtoToPokemon = (dto) => ({
 export async function getPokemons() {
     const response = await fetch(`${BASE_URL}?limit=20`)
     const { results } = await response.json()
+
     const promises = results.map(async ({ url }) => {
         const response = await fetch(url)
         const pokemon = await response.json()
