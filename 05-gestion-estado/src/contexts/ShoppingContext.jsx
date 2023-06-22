@@ -4,7 +4,7 @@ const ShoppingContext = createContext();
 
 const shoppingReducer = (state, action) => {
     switch (action.type) {
-        case "ADD_TO_CART": 
+        case "ADD_TO_CART": {
             const itemInCart = state.cart.find((item) => item.id === action.payload.id);
 
             if (itemInCart) {
@@ -20,13 +20,13 @@ const shoppingReducer = (state, action) => {
                     total: state.total + action.payload.price
                 }
             }
-        
+            
             return {
                 ...state,
                 cart: [...state.cart, { ...action.payload, quantity: 1 }],
                 total: state.total + action.payload.price
             };
-
+        }
         case "REMOVE_FROM_CART":
             const itemToRemove = state.cart.find((item) => item.id === action.payload);
 
