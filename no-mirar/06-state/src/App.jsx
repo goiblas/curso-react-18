@@ -1,13 +1,13 @@
 import ProductsList from './Components/ProductsList'
 import ShoppingCart from './Components/ShoppingCart'
-import ShoppingProvider from './Components/ShoppingProvider'
+// import ShoppingProvider from './Components/ShoppingProvider'
 
 import { Provider } from "react-redux";
 import { store } from "./store";
 
 function App() {
   return (
-    <ShoppingProvider>
+    // <ShoppingProvider>
       <Provider store={store}>
         <div className="container">
           <div className='layout'>
@@ -16,7 +16,7 @@ function App() {
           </div>
         </div>
       </Provider>
-    </ShoppingProvider>
+    // </ShoppingProvider>
   )
 }
 
